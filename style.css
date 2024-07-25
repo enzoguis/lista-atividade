@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gainsboro;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    padding: 20px;
+    gap: 10px;
+    margin-top: 20%;
+    background-color: white;
+    box-shadow: 0 0 7px black;
+    border-radius: 10px;
+}
+
+.inputDiv{
+    display: flex;
+    gap: 10px;
+}
+.botao {
+    background-color: transparent;
+    border: none;
+}
+.items {
+    display: flex;
+    flex-direction: row;
+    width: 68%;
+}
+.separar {
+    justify-content: space-between;
+    display: flex;
+    width: 90%;
+}
+.apagador {
+    border: none;
+    background-color: transparent;
+}
+.items .apagador {
+    display: none;
+}
+.items:hover .apagador {
+    display: block;
+    color: red;
+}
+input {
+    border: none;
+    outline: none;
+}
+
