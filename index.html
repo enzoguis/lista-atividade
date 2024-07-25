@@ -11,7 +11,13 @@
     ></script>
     <script>
       function addItem() {
+
         const inputUsuario = document.getElementById('input')
+        
+        if(!inputUsuario.value){
+          alert(`Digite algo`)
+        } else {
+        
         const textoDigitado = inputUsuario.value
         inputUsuario.value = ``
 
@@ -28,6 +34,7 @@
                 </div>
             </div>
             `
+          }
       }
       function removItem(item) {
         item.parentElement.parentElement.remove()
@@ -38,7 +45,7 @@
     <div class="container" id="container">
       <div class="inputDiv">
         <input type="text" name="" id="input" placeholder="Adicione o item" />
-        <button onclick="addItem()" class="botao">
+        <button onclick="addItem()" class="botao" title="Clique aqui para adicionar o item na lista">
           <i class="fa-solid fa-plus"></i>
         </button>
       </div>

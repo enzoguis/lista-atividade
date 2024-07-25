@@ -28,12 +28,13 @@ body {
 .botao {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .items {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 58%;
+    width: 68%;
     gap: 10px;
     font-family: "Poppins", sans-serif;
 }
@@ -45,6 +46,7 @@ body {
 .apagador {
     border: none;
     background-color: transparent;
+    transition: .4s;
 }
 .items .apagador {
     display: none;
@@ -52,6 +54,7 @@ body {
 .items:hover .apagador {
     display: block;
     color: red;
+    cursor: pointer;
 }
 input {
     border: none;
