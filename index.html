@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/f77d5fecc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f77d5fecc1.js"
+      crossorigin="anonymous"
+    ></script>
     <script>
+      function addItem() {
+        const inputUsuario = document.getElementById('input')
+        const textoDigitado = inputUsuario.value
+        inputUsuario.value = ``
 
-        function addItem() {
-            const inputUsuario = document.getElementById('input')
-            const textoDigitado = inputUsuario.value
-            inputUsuario.value = ``
+        const lista = document.getElementById('container')
 
-            const lista = document.getElementById('container')
-
-            lista.innerHTML += `
+        lista.innerHTML += `
             <div class="items">
-                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="checkbox">
                 <div class="separar"> 
                 ${textoDigitado}
-                <button class="apagador">
+                <button class="apagador" onclick="removItem(this)">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </button>
                 </div>
             </div>
-            ` 
-        }
+            `
+      }
+      function removItem(item) {
+        item.parentElement.parentElement.remove()
+      }
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container" id="container">
-        <div class="inputDiv">
-            <input type="text" name="" id="input" placeholder="Adicione o item">
-            <button onclick="addItem()" class="botao">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-        </div>
+      <div class="inputDiv">
+        <input type="text" name="" id="input" placeholder="Adicione o item" />
+        <button onclick="addItem()" class="botao">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
